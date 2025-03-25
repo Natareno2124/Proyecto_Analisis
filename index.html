@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        /* centrar contenido y color de fondo */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #1085fa, #63afe9);
+            font-family: Arial, sans-serif;
+        }
+        /* formulario de iniciio de secion */
+        .login-container, .dashboard {
+            background: #3d627a;
+            padding: 45px;
+            border-radius: 26px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        /* imagen del usuario*/
+        .login-container img {
+            width: 85px;
+            margin-bottom: 10px;
+        }
+        /* separacion del titulo */
+        .login-container h2, .dashboard h2 {
+            margin-bottom: 20px;
+        }
+        /* estilo de los contenedores */
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        /* espacio entre los iconos  */
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            padding-right: 35px; 
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+        }
+        /* iconos a la derecha */
+        .input-group span {
+            position: absolute;
+            right: 10px; /* icono a la derecha*/
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 18px;
+        }
+        /* boton de */
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #ddd;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        /* cambio de color del boton de entrar*/
+        .login-button:hover {
+            background: #ccc;
+        }
+        /* ocultar  dashboard hasta que el usuario inicie sesión correctamente */
+        .dashboard {
+            display: none;
+        }
+    </style>
+    <script>
+        /* usuario y contraseña para ingresar */
+        function validarLogin() {
+            var usuario = document.getElementById("usuario").value;
+            var contrasena = document.getElementById("contrasena").value;
+            
+            var usuarioCorrecto = "julio leonardo";
+            var contrasenaCorrecta = "123456";
+            
+            if (usuario === usuarioCorrecto && contrasena === contrasenaCorrecta) {
+                // Redirigir a Principal.html
+                window.location.href = "Principal.html";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+}
+    </script>
+</head>
+<body>
+    <!-- caja para iniciar secion  -->
+    <div class="login-container">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Usuario">
+        <h2>Inicio de sesión</h2>
+        <!-- usuario -->
+        <div class="input-group">
+            <input type="text" id="usuario" placeholder="Usuario">
+            <span>✉️</span>
+        </div>
+        <!-- contraseña -->
+        <div class="input-group">
+            <input type="password" id="contrasena" placeholder="Contraseña">
+            <span>🔐</span>
+        </div>
+        <!-- boton para validar la sesion  -->
+         <button class="login-button" onclick="validarLogin()">Entrar</button>
+        
+    </div>
+    
+    <!-- dashboard para que se muestra tras iniciar sesión correctamente -->
+    <div class="dashboard">
+        <h2>Bienvenido al Sistema.</h2>
+        <p>Se ha iniciado sesión correctamente.</p>
+    </div>
+</body>
+</html>

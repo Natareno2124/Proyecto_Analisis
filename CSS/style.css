@@ -1,0 +1,211 @@
+:root{ /*pseudoselectores, no existen en html
+    tambien llamdas variables de css*/
+    --blanco: #FFFFFF;
+    --celeste: #1091b5;
+    --celeste2: #1091B5;
+    --gris: #4B4B4B;
+    --grisClaro: #6A6868; 
+    --borderColor:#E6E9ED;
+    --selected: #DCDCDC;
+}
+/*Globales*/
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    
+}  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var();
+}
+
+
+
+
+/*HEADER*/
+header{
+    color:var(--blanco);
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.45rem 2rem 0.45rem 1.27rem;
+    position: fixed;
+    background-color: var(--celeste);
+    top: 0;
+    left: 0;
+
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+}
+
+/*Menu*/
+.menu-container{
+    height:100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.menu{
+    
+    width: 3rem;
+    height:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.menu div{
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 0.30rem;
+    background-color: var(--blanco);
+    transition: all 0.2s ease;
+}
+.menu.menu-toggle div:first-child{
+    width: 40%;
+    transform: rotate(-35deg) translate(-30%, 175%);
+}
+
+.menu.menu-toggle div:last-child{
+    width: 40%;
+    transform: rotate(35deg) translate(-30%, -160%);
+}
+
+.flecha{
+    border: 2px solid black;
+    margin-left: auto;
+}
+
+.sub-menu{
+    border: 2px solid black;
+}
+
+.sub-menu .sub-menu-link{
+    display: flex;
+    margin-left: 2.5rem;
+    padding: 0.55rem 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 0.3rem;
+}
+.sub-menu:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0.07rem;
+    margin-left: 1.4rem;
+    background-color: var(--borderColor);
+}
+
+
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+.brand .name{
+    font-size: 3rem;
+    font-weight: 900;
+   margin-left: 2rem;
+}
+
+.right{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+}
+.right img{
+    width: 3.5rem;
+    margin: 0.5rem;
+}
+.right a{
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+.right a:hover{
+    background-color: var(--grisClaro)
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+/*SideBar*/
+.sidebar{
+    margin-top: 4rem;
+    width: 5.6rem;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 2rem 0;
+    border-right: 1px solid var(--borderColor);
+    overflow-y: auto;
+    background-color: var(--grisClaro);
+    transition: width 0.5s ease;
+}
+.sidebar.menu-toggle{
+    width: 25rem;
+}
+.sidebar img{
+    width: 3.5rem;
+}
+.sidebar a{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    padding: 0.9rem 0.7rem;
+    text-decoration: none;
+    margin:0 0.5rem;
+    border-radius: 0.5rem;
+    white-space: nowrap ;
+    overflow: hidden;
+    color: var(--blanco);
+    font-size: 2.3rem;
+    
+}
+
+.sidebar a:hover{
+    background-color: var(--gris);
+}
+
+.sidebar a.selected{
+    background-color: var(--gris);
+}
+
+/*Responsive*/
+@media (max-width: 500px){
+    .right .icon-header{
+        display: none;
+    }
+    .sidebar{
+        width: 0;
+    }
+    .menu.menu-toggle div:first-child{
+        width: 100%;
+        transform: rotate(-45deg) translate(-0.2rem,0.3rem);
+    }
+    .menu.menu-toggle div:nth-child(2){
+        opacity: 0;
+    }
+    .menu.menu-toggle div:last-child{
+        width: 100%;
+        transform: rotate(45deg) translate(-0.2rem,-0.3rem);
+    }
+}
