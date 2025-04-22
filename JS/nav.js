@@ -1,19 +1,17 @@
-const menuItemDropDown = document.querySelectorAll('.menu-item-dropdown');
+// JavaScript to handle interactive menu functionality
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll(".menu-item");
+  menuItems.forEach((item) => {
+    const subMenu = item.querySelector(".sub-menu");
+    const menuLink = item.querySelector(".menu-link");
 
-menuItemDropDown.forEach((menuItem) => {
-    menuItem.addEventListener('click', () => {
-        const subMenu = menuItem.querySelector('.sub-menu');
-        const isActive = menuItem.classList.toggle('sub-menu-toggle');
-
-        if (subMenu) {
-            if (isActive) {
-                subMenu.style.height = `${subMenu.scrollHeight + 6}px`;
-                subMenu.style.padding = '0.2rem 0';
-            } else {
-                subMenu.style.height = '0';
-                subMenu.style.padding = '0';
-            }
-        }
-    });
+    if (subMenu) {
+      menuLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isOpen = subMenu.style.height && subMenu.style.height !== "0px";
+        subMenu.style.height = isOpen ? "0px" : `${subMenu.scrollHeight}px`;
+        subMenu.style.padding = isOpen ? "0" : "0.5rem";
+      });
+    }
+  });
 });
-
