@@ -114,6 +114,9 @@ header{
     background-color: var(--gris);
     transition: width 0.5s ease;
 }
+.sidebar.minimize{
+    width: 4.94rem;
+}
 
 .encabezado{
     width: 100%;
@@ -137,10 +140,17 @@ header{
 .menu-btn i{
     font-size: 1.5rem;
 }
+.sidebar.minimize .menu-btn i{
+    transform: rotate(180deg);
+}
+.sidebar.minimize .menu-btn {
+    right: -2.2rem;
+}
 
 .menu-container{
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
 }
@@ -180,20 +190,48 @@ header{
 }
 .menu-link i:last-child{
     margin-left: auto;
+    transition: transform 0.3s ease;
 }
-
+.sidebar.minimize .menu-link i:last-child{
+    display: none;
+}
+.menu-item.sub-menu-toggle .menu-link i:last-child{
+    transform: rotate(180deg);
+}
 .menu-link span{
     font-size: 0.8rem;
     font-weight: 500;
 }
 
+.sidebar.minimize .menu-item:hover,
+.sidebar.minimize .menu-item.sub-menu-toggle{
+    overflow: visible;
+}
+
+.sidebar.minimize .menu-item:hover span,
+.sidebar.minimize .menu-item.sub-menu-toggle span{
+    position: absolute;
+    left: 4.2rem;
+    padding: 0.5rem;
+    background-color: var(--grisClaro);
+    border-radius: 0.4rem;
+    color: var(--blanco);
+    transition: all 0.3s ease;
+}
+
+
 /*Sub menu*/
 .sub-menu{
-        
+        height: 0;
+        transition: all 0.3s ease;
         overflow: hidden;
-        padding: 0;
-        transition: height 0.3s ease, padding 0.3s ease;
-    
+}
+.sidebar.minimize .sub-menu{
+    position: absolute;
+    left: 4.2rem;
+    top: 3rem;
+    background-color: var(--grisClaro);
+    border-radius: 0.2rem;
 }
 
 .sub-menu .sub-menu-link{
@@ -219,4 +257,12 @@ header{
     width: 0.07rem;
     margin-left: 1.4rem;
     background-color: var(--blanco);
+}
+
+.sidebar.minimize .sub-menu::before{
+    width: 0;
+}
+
+.sidebar.minimize .sub-menu a{
+    margin: 0 0.5rem;
 }
