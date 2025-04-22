@@ -4,107 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap" rel="stylesheet">
     <link rel="preload" href="CSS/style.css" as="style">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
     <header>
-       <div class="left">
-            <div class="menu-container">
-                <div class="menu" id="menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="brand">
-                   <span class="name">A&M MultiServicios</span>
-                </div>
+        <div class="left">
+                 <div class="brand">
+                    <span class="name">A&M MultiServicios</span>
+                 </div>
+        </div>
+        <div class="right">
+         <a href="#">
+             <img src="/IMG/on-off-svgrepo-com.svg" alt="Cerrar Sesion">
+         </a>
+        </div>
+     </header>
+    
+     <div class="sidebar">
+        <div class="encabezado">
+            <div class="menu-btn">
+                <i class='bx bx-chevron-left'></i>
             </div>
-       </div>
-       <div class="right">
-        <a href="#">
-            <img src="/IMG/on-off-svgrepo-com.svg" alt="Cerrar Sesion">
-        </a>
-       </div>
-    </header>
-    <div class="sidebar" id="sidebar">
-        <nav>
-
-            <ul>
-                <li>
-                    <a href="Principal.html" class="selected">
-                        <img src="/IMG/home-svgrepo-com.svg" alt="Inicio">
+            <div class="brand2">
+                <img src="/IMG/57967b8930c1ce7f5269370bb3faea67.jpg" alt="">
+                <span>Conectado</span>
+            </div>
+        </div>
+        <div class="menu-container">
+            <ul class="menu">
+                <li class="menu-item menu-item-static">
+                    <a href="" class="menu-link">
+                        <i class='bx bx-home' ></i>
                         <span>Inicio</span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-dropdown">
-                    <a href="Compras.html" class="icon-header">
-                        <img src="/IMG/truck-svgrepo-com.svg" alt="Compras">
+                    <a href="" class="menu-link">
+                        <i class='bx bx-shopping-bag' ></i>
                         <span>Compras</span>
-                        <img src="/IMG/arrow-down-svgrepo-com.svg" class="flecha" alt="desplegar">
+                        <i class='bx bx-chevron-down' ></i>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="#" class="sub-menu-link">Compra Nueva</a></li>
-                        <li><a href="#" class="sub-menu-link">Historial Compra</a></li>
+                        <li><a href="" class="sub-menu-link">Compra Nueva</a></li>
+                        <li><a href="" class="sub-menu-link">Historial Compra</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#" class="icon-header">
-                        <img src="/IMG/box-archive-svgrepo-com.svg" alt="Inventario">
+                <li class="menu-item menu-item-static">
+                    <a href="" class="menu-link">
+                        <i class='bx bxs-box' ></i>
                         <span>Inventario</span>
                     </a>
                 </li>
                 <li class="menu-item menu-item-dropdown">
-                    <a href="#" class="icon-header">
-                        <img src="/IMG/contact-book-svgrepo-com.svg" alt="Contactos">
+                    <a href="" class="menu-link">
+                        <i class='bx bxs-contact' ></i>
                         <span>Contactos</span>
-                        <img src="/IMG/arrow-down-svgrepo-com.svg" class="flecha" alt="desplegar">
+                        <i class='bx bx-chevron-down' ></i>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="#" class="sub-menu-link">Contacto Proveedores</a></li>
-                        <li><a href="#" class="sub-menu-link">Contacto Clientes</a></li>
+                        <li><a href="" class="sub-menu-link">Contacto Proveedores</a></li>
+                        <li><a href="" class="sub-menu-link">Contacto Clientes</a></li>
                     </ul>
                 </li>
                 <li class="menu-item menu-item-dropdown">
-                    <a href="#" class="icon-header">
-                        <img src="/IMG/dollar-coin-svgrepo-com.svg" alt="Facturacion">
+                    <a href="" class="menu-link">
+                        <i class='bx bx-dollar' ></i>
                         <span>Facturación</span>
-                        <img src="/IMG/arrow-down-svgrepo-com.svg"  class="flecha" alt="desplegar">
+                        <i class='bx bx-chevron-down' ></i>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="#" class="sub-menu-link">Nueva Venta</a></li>
-                        <li><a href="#" class="sub-menu-link">Administrar Facturas</a></li>
-                    </ul> 
+                        <li><a href="" class="sub-menu-link">Nueva Venta</a></li>
+                        <li><a href="" class="sub-menu-link">Administrar facturas</a></li>
+                    </ul>
                 </li>
                 <li class="menu-item menu-item-dropdown">
-                    <a href="#" class="icon-header">
-                        <img src="/IMG/statistics-graph-stats-analytics-business-data-svgrepo-com.svg" alt="Reportes">
+                    <a href="" class="menu-link">
+                        <i class='bx bx-bar-chart-alt' ></i>
                         <span>Reportes</span>
-                        <img src="/IMG/arrow-down-svgrepo-com.svg"  class="flecha" alt="desplegar">
+                        <i class='bx bx-chevron-down' ></i>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="#" class="sub-menu-link">Reporte de Ventas</a></li>
-                        <li><a href="#" class="sub-menu-link">Reporte de Productos</a></li>
-                    </ul> 
+                        <li><a href="" class="sub-menu-link">Reporte ventas</a></li>
+                        <li><a href="" class="sub-menu-link">Reporte productos</a></li>
+                    </ul>
                 </li>
-
-
-
+    
             </ul>
+        </div>
+        
 
-            
-           
-        </nav>
-    </div>
-    <main>
+     </div>
 
-    </main>
 
+
+        
     <script src="/JS/nav.js"></script>
 </body>
 </html>
