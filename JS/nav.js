@@ -3,6 +3,12 @@ const menuItemDropDown = document.querySelectorAll('.menu-item-dropdown');
 const menuItemStatic = document.querySelectorAll('.menu-item-static')
 const sidebar = document.getElementById('sidebar');
 const menuBtn = document.getElementById('menu-btn');
+const sidebarBtn = document.getElementById('sidebar-btn');
+
+sidebarBtn.addEventListener('click',()=>{
+    document.body.classList.toggle('sidebar-hidden')
+})
+
 
 menuBtn.addEventListener('click',()=>{
     sidebar.classList.toggle('minimize');
@@ -45,3 +51,10 @@ menuItemStatic.forEach((menuItem)=>{
         });
     })
 })
+
+function checkWindowsSize(){
+    sidebar.classList.remove('minimize')
+}
+
+checkWindowsSize();
+window.addEventListener('resize',checkWindowsSize);
