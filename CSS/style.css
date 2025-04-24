@@ -306,3 +306,13 @@ header{
         display: none; 
      }
 }
+
+
+/*Compra nueva*/
+
+.compra{
+    display: grid;
+    margin-left: 5rem;
+    margin-top: 3.2rem;
+    border:solid 2px red;
+}
